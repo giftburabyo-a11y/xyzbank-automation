@@ -13,9 +13,18 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <allure.version>2.25.0</allure.version>
+        <aspectj.version>1.9.21</aspectj.version>
     </properties>
 
     <dependencies>
+
+        <!-- Logback Classic (brings SLF4J transitively) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.3</version>
+        </dependency>
 
         <!-- Selenium -->
         <dependency>
@@ -24,7 +33,7 @@
             <version>4.18.1</version>
         </dependency>
 
-        <!-- WebDriverManager — auto-downloads correct ChromeDriver -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -46,7 +55,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit Platform Launcher — required for Surefire to find tests -->
+        <!-- JUnit Platform Launcher -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
@@ -54,11 +63,19 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Allure JUnit5 integration -->
+        <!-- Allure JUnit5 — declared once -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
-            <version>2.25.0</version>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- AspectJ Weaver — required for @Step to work at runtime -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -78,6 +95,17 @@
                     <systemPropertyVariables>
                         <headless>${headless}</headless>
                     </systemPropertyVariables>
+                    <!-- AspectJ agent — activates @Step instrumentation -->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <!-- Tell Allure where to write results -->
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/allure-results</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -92,6 +120,10 @@
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
                 <version>2.12.0</version>
+                <configuration>
+                    <!-- Tell allure:serve where to read results from -->
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                </configuration>
             </plugin>
 
             <plugin>
