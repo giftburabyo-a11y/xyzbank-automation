@@ -1,25 +1,37 @@
-# Base image already has Java 17 + Maven installed
+# Base image with Java 17 + Maven
 FROM maven:3.9.6-eclipse-temurin-17
 
-# Install Google Chrome for headless Selenium tests
-RUN apt-get update && apt-get install -y wget gnupg \
-    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
-       >> /etc/apt/sources.list.d/google.list \
+# Install Google Chrome using the NEW correct method
+# apt-key is deprecated — we now use /etc/apt/keyrings/ instead
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    ca-certificates \
+    curl \
+    --no-install-recommends \
+    && install -m 0755 -d /etc/apt/keyrings \
+    && curl -fsSL https://dl.google.com/linux/linux_signing_key.pub \
+       | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg \
+    && chmod a+r /etc/apt/keyrings/google-chrome.gpg \
+    && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] \
+       http://dl.google.com/linux/chrome/deb/ stable main" \
+       > /etc/apt/sources.list.d/google-chrome.list \
     && apt-get update \
     && apt-get install -y google-chrome-stable \
     && rm -rf /var/lib/apt/lists/*
 
-# All project files go in /app inside the container
+# Verify Chrome installed correctly
+RUN google-chrome --version
+
+# Set working directory
 WORKDIR /app
 
-# Copy pom.xml first so Maven dependency downloads are cached
-# If pom.xml hasn't changed Docker reuses this layer → faster builds
+# Copy pom first — Docker caches dependency downloads if pom unchanged
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
 
-# Copy the rest of the source code
+# Copy source code
 COPY src ./src
 
-# When container runs → execute all tests in headless Chrome
+# Run all tests headlessly when container starts
 CMD ["mvn", "test", "-Dheadless=true", "-B"]

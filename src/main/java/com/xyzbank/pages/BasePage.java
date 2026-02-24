@@ -29,21 +29,14 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
     }
 
-    protected String getText(WebElement element) {
-        return wait.until(ExpectedConditions.visibilityOf(element)).getText();
-    }
-
     protected void selectByText(By locator, String text) {
         new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(locator)))
                 .selectByVisibleText(text);
     }
 
     protected boolean isDisplayed(By locator) {
-        try {
-            return driver.findElement(locator).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
+        try { return driver.findElement(locator).isDisplayed(); }
+        catch (Exception e) { return false; }
     }
 
     protected String acceptAlertAndGetText() {
