@@ -22,11 +22,9 @@ public class CustomerTest extends BaseTest {
         String firstName = TestData.uniqueFirst();
         String lastName  = TestData.uniqueLast();
         customerFullName = firstName + " " + lastName;
-
         ManagerPage manager = homePage.clickManagerLogin();
         manager.addCustomer(firstName, lastName, TestData.uniquePostcode());
         manager.openAccount(customerFullName, TestData.DOLLAR);
-
         homePage.open();
         accountPage = homePage.clickCustomerLogin().loginAs(customerFullName);
     }
@@ -64,7 +62,7 @@ public class CustomerTest extends BaseTest {
         assertTrue(accountPage.getStatusMessage().contains(TestData.DEPOSIT_SUCCESS_MSG),
                 "Expected deposit success message. Got: " + accountPage.getStatusMessage());
         assertEquals(1000, accountPage.getBalance(),
-                "Balance should be 1000 after depositing 1000 into a zero balance account");
+                "Balance should be 1000 after depositing 1000");
     }
 
     @Test @Order(4)
@@ -85,7 +83,7 @@ public class CustomerTest extends BaseTest {
     public void testDepositZeroNoChange() {
         accountPage.deposit(TestData.AMOUNT_ZERO);
         assertEquals(0, accountPage.getBalance(),
-                "Balance should remain 0 when depositing zero into a fresh account");
+                "Balance should remain 0 when depositing zero");
     }
 
     @Test @Order(6)
@@ -148,7 +146,7 @@ public class CustomerTest extends BaseTest {
         assertTrue(accountPage.isBackButtonVisible(),
                 "Back button should be visible on transactions page");
         assertFalse(driver.getPageSource().contains("editTransaction"),
-                "There should be no editable transaction fields in customer view");
+                "There should be no editable transaction fields");
     }
 
     @Test @Order(11)
@@ -158,6 +156,8 @@ public class CustomerTest extends BaseTest {
     public void testDepositCreatesCreditEntry() {
         accountPage.deposit(TestData.DEPOSIT_1000);
         accountPage.clickTransactionsTab();
+        // Wait for table to load then check for Credit entry
+        accountPage.getTransactionCount(); // waits for rows to appear
         assertTrue(driver.getPageSource().contains("Credit"),
                 "A deposit should appear as a Credit entry in transaction history");
     }
@@ -170,7 +170,9 @@ public class CustomerTest extends BaseTest {
         accountPage.deposit(TestData.DEPOSIT_1000);
         accountPage.withdraw(TestData.WITHDRAW_200);
         accountPage.clickTransactionsTab();
+        // Wait for table to load then check for Debit entry
+        accountPage.getTransactionCount(); // waits for rows to appear
         assertTrue(driver.getPageSource().contains("Debit"),
                 "A withdrawal should appear as a Debit entry in transaction history");
     }
-}
+    }

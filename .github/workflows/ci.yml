@@ -54,6 +54,15 @@ jobs:
             --batch-mode \
             --no-transfer-progress
 
+      # Confirm surefire XML reports were generated
+      - name: Debug surefire reports
+        if: always()
+        run: |
+          echo "=== Surefire report files ==="
+          find . -name "TEST-*.xml" 2>/dev/null || echo "NO XML FILES FOUND"
+          echo "=== Surefire directory ==="
+          ls -la target/surefire-reports/ 2>/dev/null || echo "NO SUREFIRE DIR"
+
       - name: Parse test results
         if: always()
         id: parse-results
@@ -137,7 +146,6 @@ jobs:
           retention-days: 14
 
       # ── Email report ────────────────────────────────────────────────────────
-      # Secrets needed: GMAIL_ADDRESS, GMAIL_APP_PASS, REPORT_EMAIL
       - name: Send email report
         if: always()
         env:
@@ -162,6 +170,7 @@ jobs:
           passed   = "${{ steps.parse-results.outputs.passed }}"   or "0"
           failed   = "${{ steps.parse-results.outputs.failed }}"   or "0"
           skipped  = "${{ steps.parse-results.outputs.skipped }}"  or "0"
+          errors   = "${{ steps.parse-results.outputs.errors }}"   or "0"
           pass_pct = "${{ steps.parse-results.outputs.pass_pct }}" or "0"
 
           # Parse Allure JSON for rich failure details
@@ -185,7 +194,8 @@ jobs:
                   "steps": steps_str, "severity": severity, "message": msg
               })
 
-          is_pass   = int(failed) == 0
+          # is_pass only if no failures AND no errors
+          is_pass   = int(failed) == 0 and int(errors) == 0
           status    = "PASSED"  if is_pass else "FAILED"
           s_icon    = "✅"       if is_pass else "❌"
           s_color   = "#2e7d32" if is_pass else "#b71c1c"
@@ -296,7 +306,6 @@ jobs:
           PYEOF
 
       # ── Slack report ────────────────────────────────────────────────────────
-      # Secrets needed: SLACK_WEBHOOK_URL
       - name: Send Slack report
         if: always()
         env:
@@ -314,8 +323,9 @@ jobs:
           passed   = "${{ steps.parse-results.outputs.passed }}"   or "0"
           failed   = "${{ steps.parse-results.outputs.failed }}"   or "0"
           skipped  = "${{ steps.parse-results.outputs.skipped }}"  or "0"
+          errors   = "${{ steps.parse-results.outputs.errors }}"   or "0"
           pass_pct = "${{ steps.parse-results.outputs.pass_pct }}" or "0"
-          is_pass  = int(failed) == 0
+          is_pass  = int(failed) == 0 and int(errors) == 0
           repo     = "${{ github.repository }}"
           branch   = "${{ github.ref_name }}"
           actor    = "${{ github.actor }}"
@@ -354,7 +364,6 @@ jobs:
           s_label = "PASSED" if is_pass else "FAILED"
           color   = "#2e7d32" if is_pass else "#e01e5a"
 
-          # Build failure blocks
           failure_blocks = []
           for i, t in enumerate(failing_tests, 1):
               failure_blocks.append({
@@ -415,8 +424,6 @@ jobs:
           print(f"Slack sent — {len(failing_tests)} failure(s) detailed.")
           PYEOF
 
-      # Build always stays green — test failures are reported via email/Slack
-      # Only fail the workflow if Maven itself crashed (not test failures)
       - name: Summary
         if: always()
         run: |
@@ -426,5 +433,6 @@ jobs:
           echo "| Total  | ${{ steps.parse-results.outputs.total }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Passed | ${{ steps.parse-results.outputs.passed }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Failed | ${{ steps.parse-results.outputs.failed }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Errors | ${{ steps.parse-results.outputs.errors }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Skipped| ${{ steps.parse-results.outputs.skipped }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Pass % | ${{ steps.parse-results.outputs.pass_pct }}% |" >> $GITHUB_STEP_SUMMARY
