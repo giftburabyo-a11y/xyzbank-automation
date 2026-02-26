@@ -4,16 +4,9 @@ import java.util.UUID;
 
 public class TestData {
 
-    public static final String URL =
-            "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login";
 
     // ── Pre-existing customers in the XYZ Bank app ─────────────────────
     public static final String HARRY_POTTER       = "Harry Potter";
-    public static final String HERMOINE_GRANGER   = "Hermoine Granger";
-    public static final String RON_WEASLY         = "Ron Weasly";
-    public static final String ALBUS_DUMBLEDORE   = "Albus Dumbledore";
-    public static final String NEVILLE_LONGBOTTOM = "Neville Longbottom";
-
     // ── Unique customer generator for CustomerTest ──────────────────────
     // Each call returns a different name so tests never clash with each other
     // Example output: "TestA3f9b2 User"
@@ -48,7 +41,6 @@ public class TestData {
     // ── Currency options ────────────────────────────────────────────────
     public static final String DOLLAR = "Dollar";
     public static final String POUND  = "Pound";
-    public static final String RUPEE  = "Rupee";
 
     // ── Expected messages shown by the app ──────────────────────────────
     public static final String CUSTOMER_ADDED_MSG  = "Customer added successfully";

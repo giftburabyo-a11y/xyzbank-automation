@@ -1,5 +1,6 @@
 package com.xyzbank.tests;
 
+import com.xyzbank.base.BaseTest;
 import com.xyzbank.pages.ManagerPage;
 import com.xyzbank.testdata.TestData;
 import io.qameta.allure.*;

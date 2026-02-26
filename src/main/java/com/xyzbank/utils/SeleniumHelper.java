@@ -1,17 +1,16 @@
-package com.xyzbank.pages;
+package com.xyzbank.utils;
 
-import com.xyzbank.utils.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 import java.time.Duration;
 
-public class BasePage {
+public class SeleniumHelper {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    public BasePage() {
-        this.driver = DriverManager.getDriver();
+    public SeleniumHelper(WebDriver driver) {
+        this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
@@ -25,19 +24,12 @@ public class BasePage {
         el.sendKeys(text);
     }
 
-    protected String getText(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
-    }
 
     protected void selectByText(By locator, String text) {
         new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(locator)))
                 .selectByVisibleText(text);
     }
 
-    protected boolean isDisplayed(By locator) {
-        try { return driver.findElement(locator).isDisplayed(); }
-        catch (Exception e) { return false; }
-    }
 
     protected String acceptAlertAndGetText() {
         wait.until(ExpectedConditions.alertIsPresent());

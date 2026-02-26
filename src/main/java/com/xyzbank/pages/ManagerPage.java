@@ -1,82 +1,89 @@
 package com.xyzbank.pages;
 
+import com.xyzbank.utils.SeleniumHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 
-public class ManagerPage extends BasePage {
+public class ManagerPage extends SeleniumHelper {
 
-    // ── Tabs ───────────────────────────────────────────────────────────
+    private static final Logger log = LoggerFactory.getLogger(ManagerPage.class);
+
     private static final By ADD_CUSTOMER_TAB = By.xpath("//button[contains(text(),'Add Customer')]");
     private static final By OPEN_ACCOUNT_TAB = By.xpath("//button[contains(text(),'Open Account')]");
     private static final By CUSTOMERS_TAB    = By.xpath("//button[contains(text(),'Customers')]");
 
-    // ── Add Customer form ──────────────────────────────────────────────
-    // Confirmed locators — placeholder text matches exactly in the real app
     private static final By FIRST_NAME = By.xpath("//input[@placeholder='First Name']");
     private static final By LAST_NAME  = By.xpath("//input[@placeholder='Last Name']");
     private static final By POST_CODE  = By.xpath("//input[@placeholder='Post Code']");
     private static final By ADD_BTN    = By.xpath("//button[@type='submit']");
 
-    // ── Open Account form ──────────────────────────────────────────────
-    // id="userSelect" and id="currency" confirmed from real repos
     private static final By CUSTOMER_SELECT = By.id("userSelect");
     private static final By CURRENCY_SELECT = By.id("currency");
     private static final By PROCESS_BTN     = By.xpath("//button[text()='Process']");
 
-    // ── Customer list ──────────────────────────────────────────────────
     private static final By SEARCH_INPUT  = By.xpath("//input[@placeholder='Search Customer']");
     private static final By CUSTOMER_ROWS = By.xpath("//table/tbody/tr");
 
-    // ── Tab navigation ─────────────────────────────────────────────────
-    public ManagerPage goToAddCustomer() {
+    public ManagerPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public void goToAddCustomer() {
+        log.debug("Navigating to Add Customer tab...");
         click(ADD_CUSTOMER_TAB);
-        return this;
     }
 
-    public ManagerPage goToOpenAccount() {
+    public void goToOpenAccount() {
+        log.debug("Navigating to Open Account tab...");
         click(OPEN_ACCOUNT_TAB);
-        return this;
     }
 
-    public ManagerPage goToCustomers() {
+    public void goToCustomers() {
+        log.debug("Navigating to Customers tab...");
         click(CUSTOMERS_TAB);
-        return this;
     }
 
-    // ── Add Customer ───────────────────────────────────────────────────
-    // After clicking submit the app shows a browser alert saying
-    // "Customer added successfully with id:X" — we capture and return it
     public String addCustomer(String firstName, String lastName, String postCode) {
+        log.debug("Adding customer: {} {}", firstName, lastName);
         goToAddCustomer();
         type(FIRST_NAME, firstName);
         type(LAST_NAME, lastName);
         type(POST_CODE, postCode);
         click(ADD_BTN);
-        return acceptAlertAndGetText();
+        String alert = acceptAlertAndGetText();
+        log.debug("Add customer alert: {}", alert);
+        return alert;
     }
 
-    // ── Open Account ───────────────────────────────────────────────────
-    // After clicking Process the app shows a browser alert saying
-    // "Account created successfully with account Number:XXXX"
     public String openAccount(String customerFullName, String currency) {
+        log.debug("Opening {} account for: {}", currency, customerFullName);
         goToOpenAccount();
         selectByText(CUSTOMER_SELECT, customerFullName);
         selectByText(CURRENCY_SELECT, currency);
         click(PROCESS_BTN);
-        return acceptAlertAndGetText();
+        String alert = acceptAlertAndGetText();
+        log.debug("Open account alert: {}", alert);
+        return alert;
     }
 
-    // ── Customer list helpers ──────────────────────────────────────────
     public boolean isCustomerInList(String firstName) {
+        log.debug("Checking if customer '{}' is in list...", firstName);
         goToCustomers();
         type(SEARCH_INPUT, firstName);
         List<WebElement> rows = driver.findElements(CUSTOMER_ROWS);
-        return rows.stream().anyMatch(r -> r.getText().contains(firstName));
+        boolean found = rows.stream().anyMatch(r -> r.getText().contains(firstName));
+        log.debug("Customer '{}' found in list: {}", firstName, found);
+        return found;
     }
 
     public boolean deleteCustomer(String firstName) {
+        log.debug("Deleting customer: {}", firstName);
         goToCustomers();
         type(SEARCH_INPUT, firstName);
         List<WebElement> rows = wait.until(
@@ -84,9 +91,11 @@ public class ManagerPage extends BasePage {
         for (WebElement row : rows) {
             if (row.getText().contains(firstName)) {
                 row.findElement(By.xpath(".//button[text()='Delete']")).click();
+                log.debug("Delete button clicked for: {}", firstName);
                 return true;
             }
         }
+        log.warn("Customer '{}' not found for deletion", firstName);
         return false;
     }
 }
