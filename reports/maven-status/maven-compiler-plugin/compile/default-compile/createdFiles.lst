@@ -1,0 +1,5 @@
+com/xyzbank/pages/CustomerLoginPage.class
+com/xyzbank/pages/HomePage.class
+com/xyzbank/pages/ManagerPage.class
+com/xyzbank/pages/AccountPage.class
+com/xyzbank/utils/SeleniumHelper.class

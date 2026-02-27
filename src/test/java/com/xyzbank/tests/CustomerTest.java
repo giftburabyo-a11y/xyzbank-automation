@@ -1,7 +1,6 @@
 package com.xyzbank.tests;
 
 import com.xyzbank.base.BaseTest;
-import com.xyzbank.pages.AccountPage;
 import com.xyzbank.testdata.TestData;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
@@ -16,8 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CustomerTest extends BaseTest {
 
     private static final Logger log = LoggerFactory.getLogger(CustomerTest.class);
-
-    private AccountPage accountPage;
 
     @BeforeEach
     public void loginCustomer() {

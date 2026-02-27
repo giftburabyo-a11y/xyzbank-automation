@@ -1,6 +1,9 @@
 package com.xyzbank.base;
 
-import com.xyzbank.pages.HomePage;
+import com.xyzbank.pages.home.HomePage;
+import com.xyzbank.pages.customer.CustomerLoginPage;
+import com.xyzbank.pages.customer.AccountPage;
+import com.xyzbank.pages.manger.ManagerPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.AfterEach;
@@ -20,6 +23,9 @@ public class BaseTest {
 
     protected WebDriver driver;
     protected HomePage homePage;
+    protected CustomerLoginPage customerLoginPage;
+    protected AccountPage accountPage;
+    protected ManagerPage managerPage;
 
     private static WebDriver createDriver() {
         WebDriverManager.chromedriver().setup();
@@ -40,11 +46,15 @@ public class BaseTest {
     @BeforeEach
     public void setUp(TestInfo testInfo) {
         log.info("========== START: {} ==========", testInfo.getDisplayName());
-        log.debug("Initializing WebDriver...");
-        driver   = createDriver();
-        homePage = new HomePage(driver);
+        driver = createDriver();
+
+        homePage          = new HomePage(driver);
+        customerLoginPage = new CustomerLoginPage(driver);
+        accountPage       = new AccountPage(driver);
+        managerPage       = new ManagerPage(driver);
+
         homePage.open();
-        log.debug("Browser opened and home page loaded");
+        log.debug("Browser opened and all pages initialized");
     }
 
     @AfterEach

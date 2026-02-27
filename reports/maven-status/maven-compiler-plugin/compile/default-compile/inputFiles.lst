@@ -1,0 +1,5 @@
+/app/src/main/java/com/xyzbank/pages/AccountPage.java
+/app/src/main/java/com/xyzbank/pages/CustomerLoginPage.java
+/app/src/main/java/com/xyzbank/pages/HomePage.java
+/app/src/main/java/com/xyzbank/pages/ManagerPage.java
+/app/src/main/java/com/xyzbank/utils/SeleniumHelper.java

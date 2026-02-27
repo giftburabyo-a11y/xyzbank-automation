@@ -1,0 +1,4 @@
+/app/src/test/java/com/xyzbank/base/BaseTest.java
+/app/src/test/java/com/xyzbank/testdata/TestData.java
+/app/src/test/java/com/xyzbank/tests/CustomerTest.java
+/app/src/test/java/com/xyzbank/tests/ManagerTest.java

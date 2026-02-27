@@ -1,0 +1,497 @@
+2026-02-26 13:51:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-09: Successful customer login ==========
+2026-02-26 13:51:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:09 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:12 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:12 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:12 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:15 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying customer login for: Harry Potter
+2026-02-26 13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Login verified - dashboard loaded correctly
+2026-02-26 13:52:17 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:52:18 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-09: Successful customer login ==========
+2026-02-26 13:52:18 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-10: View transaction history ==========
+2026-02-26 13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:18 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:21 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:21 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:21 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:22 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:52:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:52:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 to generate a transaction
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 1
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Transaction count found: 1
+2026-02-26 13:52:26 [INFO ] [main] com.xyzbank.tests.CustomerTest - Transaction history verified - 1 transaction(s) found
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:52:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-10: View transaction history ==========
+2026-02-26 13:52:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-11: Deposit valid amount updates balance ==========
+2026-02-26 13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:27 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:29 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:29 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:29 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:30 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:52:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:52:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing amount: 1000
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status message after deposit: 'Deposit Successful'
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 1000
+2026-02-26 13:52:32 [INFO ] [main] com.xyzbank.tests.CustomerTest - Deposit verified - balance updated to 1000
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:52:32 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-11: Deposit valid amount updates balance ==========
+2026-02-26 13:52:32 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-12: Multiple deposits accumulate in balance ==========
+2026-02-26 13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:33 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:35 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:35 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:35 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:36 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:52:37 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:52:37 [INFO ] [main] com.xyzbank.tests.CustomerTest - Making two deposits: 1000 then 500
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 500
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 500 completed
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1500
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 1500
+2026-02-26 13:52:39 [INFO ] [main] com.xyzbank.tests.CustomerTest - Multiple deposits verified - final balance: 1500
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:52:39 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-12: Multiple deposits accumulate in balance ==========
+2026-02-26 13:52:39 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-13: Deposit zero does not change balance ==========
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:39 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:41 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:42 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:52:44 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:52:44 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing zero - expecting no balance change
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 0
+2026-02-26 13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:52:56 [WARN ] [main] com.xyzbank.pages.AccountPage - No status message appeared within 10 seconds
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 0 completed
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 0
+2026-02-26 13:52:56 [INFO ] [main] com.xyzbank.tests.CustomerTest - Zero deposit verified - balance unchanged at 0
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:52:56 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-13: Deposit zero does not change balance ==========
+2026-02-26 13:52:56 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-14: Withdraw valid amount updates balance ==========
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:52:56 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:52:58 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:52:58 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:52:58 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:52:59 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:00 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:00 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing 200
+2026-02-26 13:53:00 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 200
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 200 completed
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status message after withdrawal: 'Deposit Successful'
+2026-02-26 13:53:01 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:53:02 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-14: Withdraw valid amount updates balance ==========
+2026-02-26 13:53:02 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-15: Withdraw exact balance leaves zero ==========
+2026-02-26 13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:53:02 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:53:04 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:53:04 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:53:04 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:53:05 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:06 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:06 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing same amount
+2026-02-26 13:53:06 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 1000
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 1000 completed
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status after exact withdrawal: 'Deposit Successful'
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:53:07 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-15: Withdraw exact balance leaves zero ==========
+2026-02-26 13:53:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-16: Withdraw more than balance fails ==========
+2026-02-26 13:53:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:53:08 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:53:10 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:53:10 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:53:10 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:53:11 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:13 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:13 [INFO ] [main] com.xyzbank.tests.CustomerTest - Attempting to overdraw with 99999
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 99999
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 99999 completed
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status after overdraw attempt: 'Transaction Failed'
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+2026-02-26 13:53:14 [WARN ] [main] com.xyzbank.tests.CustomerTest - Overdraw attempt correctly rejected - balance remains 0
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:53:14 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-16: Withdraw more than balance fails ==========
+2026-02-26 13:53:14 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-17: Withdraw zero does not change balance ==========
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:53:14 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:53:16 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:53:16 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:53:16 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:53:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:19 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:19 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing zero
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+2026-02-26 13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 0
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 0 completed
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance after deposit: 1000 after zero withdrawal: 1000
+2026-02-26 13:53:20 [INFO ] [main] com.xyzbank.tests.CustomerTest - Zero withdrawal verified - balance unchanged at 1000
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:53:20 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-17: Withdraw zero does not change balance ==========
+2026-02-26 13:53:20 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-18: Transaction history is read-only ==========
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:53:20 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:53:22 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:53:22 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:53:22 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:53:23 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Checking transaction history is read-only
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.pages.AccountPage - Back button visible: true
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Back button visible: true
+2026-02-26 13:53:26 [INFO ] [main] com.xyzbank.tests.CustomerTest - Transaction history read-only check passed
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:53:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-18: Transaction history is read-only ==========
+2026-02-26 13:53:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-19: Deposit creates Credit transaction entry ==========
+2026-02-26 13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:53:27 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:53:28 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:53:28 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:53:28 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:53:30 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:53:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:53:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying deposit creates a Credit entry in transaction history
+2026-02-26 13:53:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+2026-02-26 13:53:47 [WARN ] [main] com.xyzbank.pages.AccountPage - No transaction rows found after clicking Transactions tab
+2026-02-26 13:54:02 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 0
+2026-02-26 13:54:02 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Credit entry found in transaction history: false
+2026-02-26 13:54:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:54:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:54:03 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:54:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-19: Deposit creates Credit transaction entry ==========
+2026-02-26 13:54:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-20: Withdrawal creates Debit transaction entry ==========
+2026-02-26 13:54:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:54:03 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:54:04 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:54:04 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+2026-02-26 13:54:04 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:54:15 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+2026-02-26 13:54:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+2026-02-26 13:54:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying withdrawal creates a Debit entry in transaction history
+2026-02-26 13:54:17 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 200
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 200 completed
+2026-02-26 13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+2026-02-26 13:54:33 [WARN ] [main] com.xyzbank.pages.AccountPage - No transaction rows found after clicking Transactions tab
+2026-02-26 13:54:48 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 0
+2026-02-26 13:54:48 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Debit entry found in transaction history: false
+2026-02-26 13:54:48 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:54:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-20: Withdrawal creates Debit transaction entry ==========
+2026-02-26 13:54:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-01: Add valid customer ==========
+2026-02-26 13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:54:49 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:54:51 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:54:51 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:54:51 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:54:52 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:54:52 [INFO ] [main] com.xyzbank.tests.ManagerTest - Adding customer: John Smith
+2026-02-26 13:54:52 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John Smith
+2026-02-26 13:54:52 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:54:53 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Alert received: Customer added successfully with customer id :6
+2026-02-26 13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'John' is in list...
+2026-02-26 13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+2026-02-26 13:54:54 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'John' found in list: true
+2026-02-26 13:54:54 [INFO ] [main] com.xyzbank.tests.ManagerTest - Customer 'John' successfully added and verified in list
+2026-02-26 13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:54:54 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-01: Add valid customer ==========
+2026-02-26 13:54:54 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-02: Name with numbers - documents app behaviour (no validation) ==========
+2026-02-26 13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:54:56 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:00 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:00 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:00 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:01 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:01 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing name with numbers: 'John123'
+2026-02-26 13:55:01 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John123 Smith
+2026-02-26 13:55:01 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:55:03 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-02: App accepted name with numbers 'John123' - no server-side validation present
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-02: Name with numbers - documents app behaviour (no validation) ==========
+2026-02-26 13:55:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-03: Name with special chars - documents app behaviour (no validation) ==========
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:03 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:05 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:05 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:05 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:06 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:06 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing name with special characters: 'John@!#'
+2026-02-26 13:55:06 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John@!# Smith
+2026-02-26 13:55:06 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:55:08 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-03: App accepted name with special chars 'John@!#' - no server-side validation present
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-03: Name with special chars - documents app behaviour (no validation) ==========
+2026-02-26 13:55:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-04: Alphabetic postcode - documents app behaviour (no validation) ==========
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:08 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:10 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:10 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:10 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:11 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:11 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing alphabetic postcode: 'ABCDE'
+2026-02-26 13:55:11 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John Smith
+2026-02-26 13:55:11 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:55:13 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-04: App accepted alphabetic postcode 'ABCDE' - postcode should be numeric per acceptance criteria
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:13 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-04: Alphabetic postcode - documents app behaviour (no validation) ==========
+2026-02-26 13:55:13 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-05: Create account for existing customer ==========
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:13 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:15 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:15 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:15 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:17 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:17 [INFO ] [main] com.xyzbank.tests.ManagerTest - Creating Dollar account for customer: Harry Potter
+2026-02-26 13:55:17 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Dollar account for: Harry Potter
+2026-02-26 13:55:17 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+2026-02-26 13:55:18 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1016
+2026-02-26 13:55:18 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Account creation alert: Account created successfully with account Number :1016
+2026-02-26 13:55:18 [INFO ] [main] com.xyzbank.tests.ManagerTest - Account created successfully for 'Harry Potter'
+2026-02-26 13:55:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:19 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:19 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-05: Create account for existing customer ==========
+2026-02-26 13:55:19 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-06: Create multiple accounts for same customer ==========
+2026-02-26 13:55:19 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:19 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:25 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:25 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:25 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:26 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:26 [INFO ] [main] com.xyzbank.tests.ManagerTest - Creating multiple accounts for customer: Harry Potter
+2026-02-26 13:55:26 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Dollar account for: Harry Potter
+2026-02-26 13:55:26 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+2026-02-26 13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1016
+2026-02-26 13:55:29 [DEBUG] [main] com.xyzbank.tests.ManagerTest - First account alert (Dollar): Account created successfully with account Number :1016
+2026-02-26 13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Pound account for: Harry Potter
+2026-02-26 13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1017
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Second account alert (Pound): Account created successfully with account Number :1017
+2026-02-26 13:55:30 [INFO ] [main] com.xyzbank.tests.ManagerTest - Both accounts created successfully for 'Harry Potter'
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:30 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-06: Create multiple accounts for same customer ==========
+2026-02-26 13:55:30 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-07: Delete customer ==========
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:30 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:32 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:32 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:33 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:33 [INFO ] [main] com.xyzbank.tests.ManagerTest - Setting up customer for deletion: DeleteMe TestUser
+2026-02-26 13:55:33 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: DeleteMe TestUser
+2026-02-26 13:55:33 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'DeleteMe' is in list...
+2026-02-26 13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'DeleteMe' found in list: true
+2026-02-26 13:55:36 [INFO ] [main] com.xyzbank.tests.ManagerTest - Deleting customer: DeleteMe
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Deleting customer: DeleteMe
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Delete button clicked for: DeleteMe
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'DeleteMe' is in list...
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'DeleteMe' found in list: false
+2026-02-26 13:55:36 [INFO ] [main] com.xyzbank.tests.ManagerTest - Customer 'DeleteMe' successfully deleted and verified removed from list
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:36 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-07: Delete customer ==========
+2026-02-26 13:55:36 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-08: Customer with no account cannot login ==========
+2026-02-26 13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+2026-02-26 13:55:37 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:38 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+2026-02-26 13:55:38 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+2026-02-26 13:55:38 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+2026-02-26 13:55:40 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+2026-02-26 13:55:40 [INFO ] [main] com.xyzbank.tests.ManagerTest - Adding customer 'NoAccount User' without creating an account
+2026-02-26 13:55:40 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: NoAccount User
+2026-02-26 13:55:40 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Checking login dropdown does not contain 'NoAccount User'
+2026-02-26 13:55:41 [INFO ] [main] com.xyzbank.tests.ManagerTest - Verified 'NoAccount User' is not present in login dropdown
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+2026-02-26 13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+2026-02-26 13:55:41 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-08: Customer with no account cannot login ==========

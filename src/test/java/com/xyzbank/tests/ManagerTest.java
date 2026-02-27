@@ -1,12 +1,12 @@
 package com.xyzbank.tests;
 
 import com.xyzbank.base.BaseTest;
-import com.xyzbank.pages.ManagerPage;
 import com.xyzbank.testdata.TestData;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @Epic("XYZ Bank")
@@ -15,8 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ManagerTest extends BaseTest {
 
     private static final Logger log = LoggerFactory.getLogger(ManagerTest.class);
-
-    private ManagerPage managerPage;
 
     @BeforeEach
     public void goToManager() {
@@ -43,7 +41,7 @@ public class ManagerTest extends BaseTest {
 
     @Test @Order(2)
     @Story("Add Customers") @Severity(SeverityLevel.NORMAL)
-    @Description("Verify behaviour when customer name contains numbers. App does not enforce name validation server-side.")
+    @Description("Verify behaviour when customer name contains numbers.")
     @DisplayName("TC-02: Name with numbers - documents app behaviour (no validation)")
     public void testRejectNameWithNumbers() {
         log.info("Testing name with numbers: '{}'", TestData.NAME_WITH_NUMBERS);
@@ -59,7 +57,7 @@ public class ManagerTest extends BaseTest {
 
     @Test @Order(3)
     @Story("Add Customers") @Severity(SeverityLevel.NORMAL)
-    @Description("Verify behaviour when customer name contains special characters. App does not enforce name validation server-side.")
+    @Description("Verify behaviour when customer name contains special characters.")
     @DisplayName("TC-03: Name with special chars - documents app behaviour (no validation)")
     public void testRejectNameWithSpecialChars() {
         log.info("Testing name with special characters: '{}'", TestData.NAME_WITH_SPECIAL);
@@ -75,7 +73,7 @@ public class ManagerTest extends BaseTest {
 
     @Test @Order(4)
     @Story("Add Customers") @Severity(SeverityLevel.NORMAL)
-    @Description("Verify behaviour when postal code contains letters. App does not enforce postcode validation.")
+    @Description("Verify behaviour when postal code contains letters.")
     @DisplayName("TC-04: Alphabetic postcode - documents app behaviour (no validation)")
     public void testRejectAlphabeticPostcode() {
         log.info("Testing alphabetic postcode: '{}'", TestData.POSTCODE_LETTERS);

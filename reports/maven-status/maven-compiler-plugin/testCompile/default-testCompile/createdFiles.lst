@@ -1,0 +1,4 @@
+com/xyzbank/base/BaseTest.class
+com/xyzbank/tests/CustomerTest.class
+com/xyzbank/tests/ManagerTest.class
+com/xyzbank/testdata/TestData.class

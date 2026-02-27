@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.xyzbank.tests.CustomerTest" time="180.543" tests="12" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="/root/.cache/selenium/chromedriver/linux64/145.0.7632.117/chromedriver"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.5.3/logback-classic-1.5.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.5.3/logback-core-1.5.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/root/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/root/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/root/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/root/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/root/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/root/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/root/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/root/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.25.0/allure-junit5-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20260226135134685_3.jar /app/target/surefire 2026-02-26T13-51-33_715-jvmRun1 surefire-20260226135134685_1tmp surefire_0-20260226135134685_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.5.3/logback-classic-1.5.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.5.3/logback-core-1.5.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/root/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/root/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/root/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/root/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/root/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/root/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/root/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/root/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.25.0/allure-junit5-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:"/>
+    <property name="allure.results.directory" value="/app/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="basedir" value="/app"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20260226135134685_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+9"/>
+    <property name="user.name" value="root"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.167.4-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.11+9"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="/app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="headless" value="true"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.11+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testCustomerLogin" classname="com.xyzbank.tests.CustomerTest" time="29.235">
+    <system-out><![CDATA[13:51:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-09: Successful customer login ==========
+13:51:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:09 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:12 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:12 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:12 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:15 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:52:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying customer login for: Harry Potter
+13:52:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Login verified - dashboard loaded correctly
+13:52:17 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:52:18 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-09: Successful customer login ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testViewTransactions" classname="com.xyzbank.tests.CustomerTest" time="8.275">
+    <system-out><![CDATA[13:52:18 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-10: View transaction history ==========
+13:52:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:18 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:21 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:21 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:21 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:22 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:52:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:52:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:52:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:52:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:52:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 to generate a transaction
+13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:52:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+13:52:26 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 1
+13:52:26 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Transaction count found: 1
+13:52:26 [INFO ] [main] com.xyzbank.tests.CustomerTest - Transaction history verified - 1 transaction(s) found
+13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:52:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-10: View transaction history ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:18 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testDepositUpdatesBalance" classname="com.xyzbank.tests.CustomerTest" time="6.065">
+    <system-out><![CDATA[13:52:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-11: Deposit valid amount updates balance ==========
+13:52:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:27 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:29 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:29 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:29 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:30 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:52:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:52:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:52:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing amount: 1000
+13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:52:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:52:32 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status message after deposit: 'Deposit Successful'
+13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+13:52:32 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 1000
+13:52:32 [INFO ] [main] com.xyzbank.tests.CustomerTest - Deposit verified - balance updated to 1000
+13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:52:32 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-11: Deposit valid amount updates balance ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testMultipleDepositsAccumulate" classname="com.xyzbank.tests.CustomerTest" time="6.283">
+    <system-out><![CDATA[13:52:32 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-12: Multiple deposits accumulate in balance ==========
+13:52:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:33 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:35 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:35 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:35 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:36 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:52:37 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:52:37 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:52:37 [INFO ] [main] com.xyzbank.tests.CustomerTest - Making two deposits: 1000 then 500
+13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:52:37 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:52:38 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 500
+13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 500 completed
+13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:39 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1500
+13:52:39 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 1500
+13:52:39 [INFO ] [main] com.xyzbank.tests.CustomerTest - Multiple deposits verified - final balance: 1500
+13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:52:39 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-12: Multiple deposits accumulate in balance ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testDepositZeroNoChange" classname="com.xyzbank.tests.CustomerTest" time="17.225">
+    <system-out><![CDATA[13:52:39 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-13: Deposit zero does not change balance ==========
+13:52:39 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:39 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:41 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:42 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:52:43 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:52:44 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:52:44 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:52:44 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:52:44 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing zero - expecting no balance change
+13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 0
+13:52:44 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:52:56 [WARN ] [main] com.xyzbank.pages.AccountPage - No status message appeared within 10 seconds
+13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 0 completed
+13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:52:56 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:52:56 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance before: 0 after: 0
+13:52:56 [INFO ] [main] com.xyzbank.tests.CustomerTest - Zero deposit verified - balance unchanged at 0
+13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:52:56 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-13: Deposit zero does not change balance ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:39 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testWithdrawUpdatesBalance" classname="com.xyzbank.tests.CustomerTest" time="5.671">
+    <failure message="Expected withdrawal success message. Got: Deposit Successful ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected withdrawal success message. Got: Deposit Successful ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawUpdatesBalance(CustomerTest.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[13:52:56 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-14: Withdraw valid amount updates balance ==========
+13:52:56 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:52:56 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:52:58 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:52:58 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:52:58 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:52:59 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:00 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:00 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:00 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing 200
+13:53:00 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 200
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:01 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 200 completed
+13:53:01 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status message after withdrawal: 'Deposit Successful'
+13:53:01 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:53:02 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-14: Withdraw valid amount updates balance ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:52:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:52:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testWithdrawExactBalance" classname="com.xyzbank.tests.CustomerTest" time="5.794">
+    <failure message="Withdrawing exact balance should succeed ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Withdrawing exact balance should succeed ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawExactBalance(CustomerTest.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[13:53:02 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-15: Withdraw exact balance leaves zero ==========
+13:53:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:53:02 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:53:04 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:53:04 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:53:04 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:53:05 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:06 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:06 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:06 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing same amount
+13:53:06 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 1000
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:07 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 1000 completed
+13:53:07 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status after exact withdrawal: 'Deposit Successful'
+13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:53:07 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:53:07 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-15: Withdraw exact balance leaves zero ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:53:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:53:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testWithdrawOverBalanceFails" classname="com.xyzbank.tests.CustomerTest" time="6.342">
+    <system-out><![CDATA[13:53:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-16: Withdraw more than balance fails ==========
+13:53:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:53:08 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:53:10 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:53:10 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:53:10 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:53:11 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:13 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:13 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:13 [INFO ] [main] com.xyzbank.tests.CustomerTest - Attempting to overdraw with 99999
+13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:53:13 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 99999
+13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 99999 completed
+13:53:14 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Status after overdraw attempt: 'Transaction Failed'
+13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:14 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 0
+13:53:14 [WARN ] [main] com.xyzbank.tests.CustomerTest - Overdraw attempt correctly rejected - balance remains 0
+13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:53:14 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-16: Withdraw more than balance fails ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:53:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:53:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testWithdrawZeroNoChange" classname="com.xyzbank.tests.CustomerTest" time="6.072">
+    <system-out><![CDATA[13:53:14 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-17: Withdraw zero does not change balance ==========
+13:53:14 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:53:14 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:53:16 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:53:16 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:53:16 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:53:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:18 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:19 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:19 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:19 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:19 [INFO ] [main] com.xyzbank.tests.CustomerTest - Depositing 1000 then withdrawing zero
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+13:53:19 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 0
+13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 0 completed
+13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Reading account balance...
+13:53:20 [DEBUG] [main] com.xyzbank.pages.AccountPage - Current balance: 1000
+13:53:20 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Balance after deposit: 1000 after zero withdrawal: 1000
+13:53:20 [INFO ] [main] com.xyzbank.tests.CustomerTest - Zero withdrawal verified - balance unchanged at 1000
+13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:53:20 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-17: Withdraw zero does not change balance ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:53:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:53:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTransactionHistoryReadOnly" classname="com.xyzbank.tests.CustomerTest" time="6.192">
+    <system-out><![CDATA[13:53:20 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-18: Transaction history is read-only ==========
+13:53:20 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:53:20 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:53:22 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:53:22 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:53:22 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:53:23 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:24 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:25 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:25 [INFO ] [main] com.xyzbank.tests.CustomerTest - Checking transaction history is read-only
+13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:53:25 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+13:53:26 [DEBUG] [main] com.xyzbank.pages.AccountPage - Back button visible: true
+13:53:26 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Back button visible: true
+13:53:26 [INFO ] [main] com.xyzbank.tests.CustomerTest - Transaction history read-only check passed
+13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:53:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-18: Transaction history is read-only ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:53:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:53:20 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testDepositCreatesCreditEntry" classname="com.xyzbank.tests.CustomerTest" time="36.385">
+    <failure message="A deposit should appear as a Credit entry in transaction history ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: A deposit should appear as a Credit entry in transaction history ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testDepositCreatesCreditEntry(CustomerTest.java:206)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[13:53:26 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-19: Deposit creates Credit transaction entry ==========
+13:53:26 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:53:27 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:53:28 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:53:28 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:53:28 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:53:30 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:53:31 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:53:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:53:31 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying deposit creates a Credit entry in transaction history
+13:53:31 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:53:32 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+13:53:47 [WARN ] [main] com.xyzbank.pages.AccountPage - No transaction rows found after clicking Transactions tab
+13:54:02 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 0
+13:54:02 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Credit entry found in transaction history: false
+13:54:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:54:02 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:54:03 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:54:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-19: Deposit creates Credit transaction entry ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:53:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:53:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testWithdrawCreatesDebitEntry" classname="com.xyzbank.tests.CustomerTest" time="46.086">
+    <failure message="A withdrawal should appear as a Debit entry in transaction history ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: A withdrawal should appear as a Debit entry in transaction history ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawCreatesDebitEntry(CustomerTest.java:222)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[13:54:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-20: Withdrawal creates Debit transaction entry ==========
+13:54:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:54:03 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:54:04 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:54:04 [INFO ] [main] com.xyzbank.tests.CustomerTest - Logging in as pre-loaded customer: Harry Potter
+13:54:04 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:54:15 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Logging in as customer: Harry Potter
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Login successful - account page loaded
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account selector to appear...
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Waiting for account options to populate...
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dropdown options count: 3
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - First account selected — total options: 3
+13:54:17 [DEBUG] [main] com.xyzbank.pages.CustomerLoginPage - Account dashboard fully loaded and ready
+13:54:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Customer 'Harry Potter' logged in successfully
+13:54:17 [INFO ] [main] com.xyzbank.tests.CustomerTest - Verifying withdrawal creates a Debit entry in transaction history
+13:54:17 [DEBUG] [main] com.xyzbank.pages.AccountPage - Depositing amount: 1000
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Deposit of 1000 completed
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawing amount: 200
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicked element: By.xpath: //button[@type='submit']
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Status message detected
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Withdrawal of 200 completed
+13:54:18 [DEBUG] [main] com.xyzbank.pages.AccountPage - Clicking Transactions tab...
+13:54:33 [WARN ] [main] com.xyzbank.pages.AccountPage - No transaction rows found after clicking Transactions tab
+13:54:48 [DEBUG] [main] com.xyzbank.pages.AccountPage - Transaction row count: 0
+13:54:48 [DEBUG] [main] com.xyzbank.tests.CustomerTest - Debit entry found in transaction history: false
+13:54:48 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:54:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-20: Withdrawal creates Debit transaction entry ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:54:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:54:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+</testsuite>

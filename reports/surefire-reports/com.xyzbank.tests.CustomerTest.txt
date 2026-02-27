@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.xyzbank.tests.CustomerTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 180.5 s <<< FAILURE! -- in com.xyzbank.tests.CustomerTest
+com.xyzbank.tests.CustomerTest.testWithdrawUpdatesBalance -- Time elapsed: 5.671 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected withdrawal success message. Got: Deposit Successful ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawUpdatesBalance(CustomerTest.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.xyzbank.tests.CustomerTest.testWithdrawExactBalance -- Time elapsed: 5.794 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Withdrawing exact balance should succeed ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawExactBalance(CustomerTest.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.xyzbank.tests.CustomerTest.testDepositCreatesCreditEntry -- Time elapsed: 36.38 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: A deposit should appear as a Credit entry in transaction history ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testDepositCreatesCreditEntry(CustomerTest.java:206)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.xyzbank.tests.CustomerTest.testWithdrawCreatesDebitEntry -- Time elapsed: 46.09 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: A withdrawal should appear as a Debit entry in transaction history ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.xyzbank.tests.CustomerTest.testWithdrawCreatesDebitEntry(CustomerTest.java:222)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

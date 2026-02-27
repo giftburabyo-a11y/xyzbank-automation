@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.xyzbank.tests.ManagerTest" time="52.589" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="/root/.cache/selenium/chromedriver/linux64/145.0.7632.117/chromedriver"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.5.3/logback-classic-1.5.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.5.3/logback-core-1.5.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/root/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/root/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/root/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/root/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/root/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/root/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/root/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/root/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.25.0/allure-junit5-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20260226135134685_3.jar /app/target/surefire 2026-02-26T13-51-33_715-jvmRun1 surefire-20260226135134685_1tmp surefire_0-20260226135134685_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.5.3/logback-classic-1.5.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.5.3/logback-core-1.5.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/root/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/root/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/root/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/root/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/root/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/root/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/root/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/root/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/root/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/root/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/root/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.25.0/allure-junit5-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:"/>
+    <property name="allure.results.directory" value="/app/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="basedir" value="/app"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20260226135134685_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+9"/>
+    <property name="user.name" value="root"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.167.4-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.11+9"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="/app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="headless" value="true"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.11+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testAddValidCustomer" classname="com.xyzbank.tests.ManagerTest" time="5.642">
+    <system-out><![CDATA[13:54:49 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-01: Add valid customer ==========
+13:54:49 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:54:49 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:54:51 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:54:51 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:54:51 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:54:52 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:54:52 [INFO ] [main] com.xyzbank.tests.ManagerTest - Adding customer: John Smith
+13:54:52 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John Smith
+13:54:52 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:54:53 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Alert received: Customer added successfully with customer id :6
+13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'John' is in list...
+13:54:53 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+13:54:54 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'John' found in list: true
+13:54:54 [INFO ] [main] com.xyzbank.tests.ManagerTest - Customer 'John' successfully added and verified in list
+13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:54:54 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-01: Add valid customer ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:54:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:54:49 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testRejectNameWithNumbers" classname="com.xyzbank.tests.ManagerTest" time="8.686">
+    <system-out><![CDATA[13:54:54 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-02: Name with numbers - documents app behaviour (no validation) ==========
+13:54:54 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:54:56 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:00 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:00 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:00 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:01 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:01 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing name with numbers: 'John123'
+13:55:01 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John123 Smith
+13:55:01 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:55:03 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:55:03 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-02: App accepted name with numbers 'John123' - no server-side validation present
+13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-02: Name with numbers - documents app behaviour (no validation) ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:54:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:54:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testRejectNameWithSpecialChars" classname="com.xyzbank.tests.ManagerTest" time="4.84">
+    <system-out><![CDATA[13:55:03 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-03: Name with special chars - documents app behaviour (no validation) ==========
+13:55:03 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:03 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:05 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:05 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:05 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:06 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:06 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing name with special characters: 'John@!#'
+13:55:06 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John@!# Smith
+13:55:06 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:55:08 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:55:08 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-03: App accepted name with special chars 'John@!#' - no server-side validation present
+13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-03: Name with special chars - documents app behaviour (no validation) ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testRejectAlphabeticPostcode" classname="com.xyzbank.tests.ManagerTest" time="4.858">
+    <system-out><![CDATA[13:55:08 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-04: Alphabetic postcode - documents app behaviour (no validation) ==========
+13:55:08 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:08 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:10 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:10 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:10 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:11 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:11 [INFO ] [main] com.xyzbank.tests.ManagerTest - Testing alphabetic postcode: 'ABCDE'
+13:55:11 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: John Smith
+13:55:11 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:55:13 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:55:13 [WARN ] [main] com.xyzbank.tests.ManagerTest - TC-04: App accepted alphabetic postcode 'ABCDE' - postcode should be numeric per acceptance criteria
+13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:13 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-04: Alphabetic postcode - documents app behaviour (no validation) ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testCreateAccount" classname="com.xyzbank.tests.ManagerTest" time="5.693">
+    <system-out><![CDATA[13:55:13 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-05: Create account for existing customer ==========
+13:55:13 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:13 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:15 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:15 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:15 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:17 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:17 [INFO ] [main] com.xyzbank.tests.ManagerTest - Creating Dollar account for customer: Harry Potter
+13:55:17 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Dollar account for: Harry Potter
+13:55:17 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+13:55:18 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1016
+13:55:18 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Account creation alert: Account created successfully with account Number :1016
+13:55:18 [INFO ] [main] com.xyzbank.tests.ManagerTest - Account created successfully for 'Harry Potter'
+13:55:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:18 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:19 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:19 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-05: Create account for existing customer ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:13 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testCreateMultipleAccounts" classname="com.xyzbank.tests.ManagerTest" time="11.138">
+    <system-out><![CDATA[13:55:19 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-06: Create multiple accounts for same customer ==========
+13:55:19 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:19 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:25 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:25 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:25 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:26 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:26 [INFO ] [main] com.xyzbank.tests.ManagerTest - Creating multiple accounts for customer: Harry Potter
+13:55:26 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Dollar account for: Harry Potter
+13:55:26 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1016
+13:55:29 [DEBUG] [main] com.xyzbank.tests.ManagerTest - First account alert (Dollar): Account created successfully with account Number :1016
+13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Opening Pound account for: Harry Potter
+13:55:29 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Open Account tab...
+13:55:30 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Open account alert: Account created successfully with account Number :1017
+13:55:30 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Second account alert (Pound): Account created successfully with account Number :1017
+13:55:30 [INFO ] [main] com.xyzbank.tests.ManagerTest - Both accounts created successfully for 'Harry Potter'
+13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:30 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-06: Create multiple accounts for same customer ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testDeleteCustomer" classname="com.xyzbank.tests.ManagerTest" time="6.458">
+    <system-out><![CDATA[13:55:30 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-07: Delete customer ==========
+13:55:30 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:30 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:32 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:32 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:32 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:33 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:33 [INFO ] [main] com.xyzbank.tests.ManagerTest - Setting up customer for deletion: DeleteMe TestUser
+13:55:33 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: DeleteMe TestUser
+13:55:33 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'DeleteMe' is in list...
+13:55:35 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'DeleteMe' found in list: true
+13:55:36 [INFO ] [main] com.xyzbank.tests.ManagerTest - Deleting customer: DeleteMe
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Deleting customer: DeleteMe
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Delete button clicked for: DeleteMe
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Checking if customer 'DeleteMe' is in list...
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Customers tab...
+13:55:36 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Customer 'DeleteMe' found in list: false
+13:55:36 [INFO ] [main] com.xyzbank.tests.ManagerTest - Customer 'DeleteMe' successfully deleted and verified removed from list
+13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:36 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-07: Delete customer ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testCustomerWithNoAccountNotInDropdown" classname="com.xyzbank.tests.ManagerTest" time="5.079">
+    <system-out><![CDATA[13:55:36 [INFO ] [main] com.xyzbank.base.BaseTest - ========== START: TC-08: Customer with no account cannot login ==========
+13:55:36 [DEBUG] [main] com.xyzbank.base.BaseTest - Initializing WebDriver...
+13:55:37 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:38 [DEBUG] [main] com.xyzbank.base.BaseTest - Browser opened and home page loaded
+13:55:38 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Navigating to Manager login page...
+13:55:38 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Bank Manager Login button...
+13:55:40 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Manager page loaded
+13:55:40 [INFO ] [main] com.xyzbank.tests.ManagerTest - Adding customer 'NoAccount User' without creating an account
+13:55:40 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Adding customer: NoAccount User
+13:55:40 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Navigating to Add Customer tab...
+13:55:41 [DEBUG] [main] com.xyzbank.pages.ManagerPage - Add customer alert: Customer added successfully with customer id :6
+13:55:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Navigating to XYZ Bank login page...
+13:55:41 [DEBUG] [main] com.xyzbank.pages.HomePage - Clicking Customer Login button...
+13:55:41 [DEBUG] [main] com.xyzbank.tests.ManagerTest - Checking login dropdown does not contain 'NoAccount User'
+13:55:41 [INFO ] [main] com.xyzbank.tests.ManagerTest - Verified 'NoAccount User' is not present in login dropdown
+13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Taking screenshot before closing browser...
+13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - Screenshot captured successfully
+13:55:41 [DEBUG] [main] com.xyzbank.base.BaseTest - WebDriver closed
+13:55:41 [INFO ] [main] com.xyzbank.base.BaseTest - ========== END: TC-08: Customer with no account cannot login ==========
+]]></system-out>
+    <system-err><![CDATA[Feb 26, 2026 1:55:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 26, 2026 1:55:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 145.0.7632.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+</testsuite>
